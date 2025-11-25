@@ -1,0 +1,21 @@
+data:
+  path: "data/synthetic_fb_ads_undergarments.csv"
+  date_column: "date"
+
+analysis:
+  low_ctr_threshold: 0.015       # 1.5% CTR threshold to identify weak creatives
+  roas_drop_threshold_pct: 0.20   # 20% drop considered significant
+  compare_days: 7                 # for week-over-week analysis
+
+random:
+  seed: 42
+
+output:
+  reports_dir: "reports"
+  logs_dir: "logs"
+  insights_file: "reports/insights.json"
+  creatives_file: "reports/creatives.json"
+  report_file: "reports/report.md"
+
+mode:
+  use_sample: false
