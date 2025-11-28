@@ -12,36 +12,36 @@ from src.agents.creative_agent import CreativeAgent
 
 
 def main(user_query: str):
-    # Load configuration
+    #Configuration
     config = load_config()
 
-    # Load dataset
+    #Dataset
     df = load_dataset(config["data"]["path"], config["data"]["date_column"])
 
-    # Initialize agents
+    #Initialize agents
     planner = PlannerAgent()
     data_agent = DataAgent(config)
     insight_agent = InsightAgent()
     evaluator_agent = EvaluatorAgent(config)
     creative_agent = CreativeAgent()
 
-    # Generate task plan
+    #Task plan
     plan = planner.plan(user_query)
 
-    # Execute tasks
+    #Execute tasks
     data_summary = data_agent.run(df)
     hypotheses = insight_agent.generate_hypotheses(data_summary)
     evaluated = evaluator_agent.evaluate(df, hypotheses)
     creatives = creative_agent.generate(df, config["analysis"]["low_ctr_threshold"])
 
-    # Save JSON outputs
+    #Save JSON outputs
     with open(config["output"]["insights_file"], "w") as f:
         json.dump(evaluated, f, indent=2, default=str)
 
     with open(config["output"]["creatives_file"], "w") as f:
         json.dump(creatives, f, indent=2, default=str)
 
-    # Create markdown report
+    #Create markdown report
     report_lines = []
     report_lines.append("# ROAS Performance Analysis Report\n")
     report_lines.append("## Summary\n")
@@ -66,7 +66,7 @@ def main(user_query: str):
         f.write("\n".join(report_lines))
 
 
-    # Logging
+    #Logging
     log_event = {
         "user_query": user_query,
         "tasks_executed": [t.__dict__ for t in plan],

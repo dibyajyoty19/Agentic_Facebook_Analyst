@@ -21,7 +21,7 @@ class EvaluatorAgent:
         return evaluated
 
     def _evaluate_roas_trend(self, df: pd.DataFrame, h: Dict[str, Any]) -> Dict[str, Any]:
-        # Split dataset into early and late halves
+        #Split dataset into early and late halves
         midpoint = len(df) // 2
         before = df.iloc[:midpoint]
         after = df.iloc[midpoint:]

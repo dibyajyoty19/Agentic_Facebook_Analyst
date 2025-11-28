@@ -9,7 +9,7 @@ class InsightAgent:
         hypotheses = []
         roas_ts = data_summary.get("roas_time_series", [])
 
-        # Hypothesis 1 – ROAS trend based reasoning
+        #Hypothesis 1–ROAS trend based reasoning
         if len(roas_ts) >= 2:
             first = roas_ts[0]["roas"]
             last = roas_ts[-1]["roas"]
@@ -30,7 +30,7 @@ class InsightAgent:
                     "change_pct": round(change_pct, 4)
                 })
 
-        # Hypothesis 2 – Low CTR impact on ROAS
+        # Hypothesis 2–Low CTR impact on ROAS
         if data_summary.get("low_ctr_adsets"):
             hypotheses.append({
                 "id": "H2",
