@@ -36,4 +36,6 @@ python run.py "Analyze ROAS drop"
 make setup
 make run
 make test
+python run.py "Analyze ROAS drop"
+
 
