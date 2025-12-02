@@ -3,20 +3,37 @@
     "id": "H1",
     "description": "ROAS may have declined due to changes in performance metrics over time.",
     "is_supported": false,
-    "confidence": 0.044781694054722196,
+    "confidence": 0.065,
     "evidence": {
-      "baseline_roas": 9.855213903743316,
-      "recent_roas": 9.413880729862038,
-      "drop_pct": -0.044781694054722196
+      "before_roas": 9.913968446262043,
+      "after_roas": 9.369736878056049,
+      "drop_pct": 0.054895430740572
     }
   },
   {
     "id": "H2",
     "description": "Low CTR adsets may be negatively impacting ROAS. Possible messaging mismatch or creative fatigue.",
     "is_supported": true,
-    "confidence": 0.85,
+    "confidence": 1.0,
     "evidence": {
-      "low_ctr_rows": 3178
+      "low_ctr_rows": 3178,
+      "examples": [
+        {
+          "campaign_name": "Women Cotton Classics",
+          "adset_name": "Adset-3 Broad",
+          "ctr": 0.0096
+        },
+        {
+          "campaign_name": "WOMEN Cotton Classics",
+          "adset_name": "Adset-4 LAL2",
+          "ctr": 0.0141
+        },
+        {
+          "campaign_name": "WOMEN SEAMLESS EVERYDAY",
+          "adset_name": "Adset-5 LAL1",
+          "ctr": 0.01
+        }
+      ]
     }
   }
 ]

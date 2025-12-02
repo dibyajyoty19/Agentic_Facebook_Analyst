@@ -21,3 +21,19 @@ pip install -r requirements.txt
 
 #Run analysis
 python run.py "Analyze ROAS drop"
+
+### V2 Improvements
+
+- Added structured JSON-based logging with RunLogger
+- Introduced retry logic for resilient workflow execution (LLM/data operations)
+- Added strict schema validation with early failure
+- Added edge-case tests (zero rows, missing columns)
+- Improved evaluator with evidence richness (baseline vs recent ROAS)
+- Added Makefile for simple developer experience (setup/run/test)
+- Added detailed report generation with call-to-action insights
+- Added per-agent execution logging and timing-based observability
+
+make setup
+make run
+make test
+
