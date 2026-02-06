@@ -1,7 +1,6 @@
 # Agentic Facebook Performance Analyst
 
-A multi-agent, autonomous system designed to diagnose Facebook Ads performance, explain **why ROAS changed over time**, and generate **creative recommendations** to improve low-CTR campaigns.  
-Built as part of the **Kasparro Applied AI Engineer Assignment**.
+A multi-agent, autonomous system designed to diagnose Facebook Ads performance, explain **why ROAS changed over time**, and generate **creative recommendations** to improve low-CTR campaigns.**.
 
 ---
 ### V2 Improvements
